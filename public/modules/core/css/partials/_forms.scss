@@ -1,0 +1,20 @@
+input[type="search"] {
+  border: none;
+  &:hover {
+    border: none;
+  }
+  &:focus {
+    border: none;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+.profile {
+  &-beach-input {
+    display: inline-block;
+    min-width: 50%;
+  }
+}

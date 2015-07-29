@@ -1,0 +1,215 @@
+// home view
+
+body {
+  // @include grid-frame();
+  // background-image: url("../img/beaches/beach-life.jpg");
+  // @include center-background-image;
+}
+
+.ng-scope {
+  // @include grid-block(
+  //   $orientation: vertical,
+  //   $align: center
+  // );
+}
+
+.beach-finder {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  &-form {
+    width: 100%;
+    padding: 2rem;
+    margin-top: -10vh;
+    background-color: transparentize($color-base, 0);
+    }
+  &-container {
+    @include grid-block($align: center);
+    align-items: center;
+    height: 100vh;  
+    // background-color: transparentize($color-base, 0.30);
+  }
+  &-search {
+    @include grid-block($align: center);
+    @extend .medium-8;
+    @extend .small-12;
+    &-container {
+      @include grid-block($align: center);
+      margin-top: 1rem;
+      span {
+        @extend .small-10;
+        @extend .medium-8;
+      }      
+    }
+  }
+}
+
+aside.modal {
+  @extend .small-12;
+  @extend .medium-5;
+  @extend .large-4;
+}
+
+// sign in / up
+.modal-oauth {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.beach {  
+  &-list {
+    &-item {
+      height: 4rem;
+    }
+  }
+  li {
+    list-style: none;
+    height: 4rem;
+  }
+  &-name {
+    display: inline-block;
+    width: 50%;
+    &:hover {
+      background: inherit;
+    }
+  }
+  &-favorite {
+    position: absolute;
+    display: inline-block;
+    float: right;
+    right: 1rem;
+    top: 20%;
+    left: 60%;
+    width: 10rem;
+    &:hover {
+      background: inherit;
+    }
+  }
+  &-delete {
+    display: inline-block;
+    position: absolute;
+    right: 0rem;
+    top: 20%;
+  }
+}
+
+
+
+// profile
+.profile {
+  padding: 0 2rem;
+  // background: $color-light;
+  // border: 0.125rem solid darken($color-light, 20%);
+  &-beaches-container {
+    @include block-list-container(
+      $font-size: 1rem, // Base font size for entire list
+      $full-bleed: false // If true, negative margins are added on the left and right to push the list to the edge of the container
+    );
+    @include block-list-inputs(
+      $color: #000, // Foreground color
+      $background: #fff, // Background color
+      $background-hover: #fff, // Background color of elements on hover
+      $padding: 1rem
+    );
+    // background: $color-light;
+    // border: 0.125rem solid darken($color-light, 20%);
+  }
+  &-beaches-list {
+    li {
+      @include block-list-item(
+        $color: $color-base, // Color of items
+        $color-hover: $color-base,
+        $background: transparent, // Background color
+        $background-hover: transparent, // Background color on hover
+        $border: 1px solid $color-base, // Top and bottom border of items
+        $padding: 1rem
+      );
+      list-style: none;
+      height: 4rem;
+    }
+    &-name {
+      display: inline-block;
+      width: 50%;
+      &:hover {
+        background: inherit;
+      }
+    }
+    &-favorite {
+      position: absolute;
+      display: inline-block;
+      float: right;
+      right: 1rem;
+      top: 20%;
+      left: 60%;
+      width: 10rem;
+      &:hover {
+        background: inherit;
+      }
+    }
+    &-delete {
+      display: inline-block;
+      position: absolute;
+      right: 0rem;
+      top: 20%;
+    }
+  }
+  &-settings-container {
+    @include grid-block();    
+    // background: $color-light;
+    // border: 0.125rem solid darken($color-light, 20%);
+  }
+  &-settings-temps-container {
+    border-top: 1px darken($color-base, 10%) solid;
+    margin-top: 1rem;
+  }
+  &-settings-notifications {
+    @include grid-content(
+      $size: 6
+    );
+    padding-left: 0;
+    padding-right: 1rem; 
+    &-container {
+      margin-top: 1rem;
+      border-top: 1px darken($color-base, 10%) solid;
+      @include block-list-container(
+        $font-size: 1rem, // Base font size for entire list
+        $full-bleed: false // If true, negative margins are added on the left and right to push the list to the edge of the container
+      );
+      @include block-list-inputs(
+        $color: #000, // Foreground color
+        $background: #fff, // Background color
+        $background-hover: #fff, // Background color of elements on hover
+        $padding: 0rem
+      ); 
+    }
+    &-label {
+      padding-top: 1rem;
+      padding-left: 0rem !important;
+    }
+    &-list {
+      li {
+        @include block-list-item(
+          $color: $color-base, // Color of items
+          $color-hover: $color-base,
+          $background: transparent, // Background color
+          $background-hover: transparent, // Background color on hover
+          $border: 0px solid $color-base, // Top and bottom border of items
+          $padding: 1rem
+        );
+      }
+    }
+    // background: $color-light;
+    // border: 0.125rem solid darken($color-light, 20%);
+  }
+  &-settings-temps {
+    @include grid-content(
+      $size: 6
+    );
+    padding-left: 1rem;
+    padding-right: 0;
+    // background: $color-light;
+    // border: 0.125rem solid darken($color-light, 20%);
+
+  }
+}

@@ -1,0 +1,21 @@
+.beach-finder-error {
+  @extend %notification;
+  @include notification-layout(
+    $x: middle,
+    $y: top,
+    $size: 100%,
+    $offset: 2rem
+  );
+  .notification {
+    background: #333;
+    border-radius: 0px;
+    padding: 1rem;
+  }
+}
+
+.modal-alert {
+  .modal {
+    border: 0.5rem solid $color-base;
+    background-color: $color-text;
+  }
+}

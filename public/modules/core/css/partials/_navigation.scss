@@ -1,0 +1,25 @@
+.header-menu {
+  @extend %menu-bar;
+  @extend .menu-group;
+  background-color: transparent;
+  color: $color-base;
+  @extend .primary;   
+  // height: 4rem;
+  > .menu-group-right {
+    .menu-bar {
+      background-color: transparent;
+      a:hover {
+        background: transparent;
+      }
+    }
+  }
+  > .menu-group-left {
+    .menu-bar {
+      background-color: transparent;    
+      a:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+

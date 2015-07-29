@@ -1,0 +1,196 @@
+// placeholder text
+
+::-webkit-input-placeholder {
+   color: lighten($color-base, 15%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: lighten($color-base, 15%);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: lighten($color-base, 15%);  
+}
+
+:-ms-input-placeholder {  
+   color: lighten($color-base, 15%);  
+}
+
+// fonts
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(http://fonts.gstatic.com/s/oswald/v10/l1cOQ90roY9yC7voEhngDIX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(http://fonts.gstatic.com/s/oswald/v10/HqHm7BVC_nzzTui2lzQTDZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v10/Qw6_9HvXRQGg5mMbFR3Phn-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v10/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://fonts.gstatic.com/s/oswald/v10/dI-qzxlKVQA6TUC5RKSb34X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Menu
+.header-menu {
+  .menu-bar {
+    .menu-bar-title, .menu-bar-item {
+      a {
+        color: $color-base;
+        font-weight: $text-light;
+        text-transform: lowercase;
+        font-size: 1.25rem;
+        &:hover {
+          color: lighten($color-base, 10%)
+        }
+      } 
+    }
+    .menu-bar-title {
+      a {
+        font-size: 1.75rem;
+        font-weight: $text-heavy;
+      }
+    }  
+  }
+}
+
+// beach finder
+.beach-finder-title {
+  font-family: $text-font;
+  font-weight: $text-heavy;  
+  text-transform: uppercase;
+  font-size: 6rem;
+  text-align: center;  
+  color: $color-text;
+}
+
+.beach-list {
+  .beach-name {
+    font-size: 2rem;
+    color: $color-base;
+    &:hover {
+      color: lighten($color-base, 10%);
+      background: inherit;
+    }
+  }
+  &-recommendation h2 {
+    font-size: 5rem;
+  }
+}
+
+// modals => signup
+.sign-up {
+  color: $color-accent;
+}
+.sign-in {
+  font-size: 1.5rem;
+  font-weight: $text-light;
+  color: $color-base;
+}
+.forgot-password {
+  a {
+    color: $color-accent;
+    text-decoration: underline;
+    text-align: center;
+  }
+}
+
+// beaches
+
+.profile {
+  h2 {
+    font-size: 6rem;
+    color: lighten($color-base, 0%);
+    font-weight: $text-heavy;
+  }
+}
+
+.beach-list-item > label.beach-favorite {
+  color: $color-base;
+  font-weight: $text-medium;
+  font-size: 1.25rem;  
+  &:hover {
+    color: darken($color-base, 10%);
+  }
+}
+
+.beach {
+  &-favorite {
+
+  }
+  &-name {
+    font-size: 2rem;
+    color: $color-base;
+    font-weight: $text-heavy;
+  }
+}
+
+.profile {
+  &-settings {
+    &-notifications {
+      h3 {
+        font-size: 2rem;
+        color: $color-base;
+        font-weight: $text-heavy;
+      }
+    }
+    &-temps {
+      h3 {
+        font-size: 2rem;
+        color: $color-base;
+        font-weight: $text-heavy;
+      }
+      h4 {
+        font-size: 1.5rem;
+        color: $color-base;
+        font-weight: $text-heavy;
+        margin-top: 1rem;
+      }
+      &-container {
+        p {
+          font-size: 5rem;
+          color: $color-base;
+          font-weight: $text-heavy;
+          text-align: center;
+          margin-top: 1rem;          
+        }
+      }
+    }
+  }
+}

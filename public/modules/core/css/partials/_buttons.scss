@@ -1,0 +1,89 @@
+.button {
+  background-color: darken($color-base, 15%);
+  color: blue;
+  border: none;
+  &:hover {
+    background-color: darken($color-base, 15%);
+    color: $color-text;
+    border: none;
+  }
+  &:focus {
+    background-color: darken($color-base, 15%);
+    color: $color-text;
+    border: none;
+  }
+  &.signin {
+    color: $color-text;   
+    font-size: 2rem;
+    background-color: darken($color-base, 0%);
+    margin-top: 1rem;
+    padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+    border-radius: 0.125rem;
+  }
+  &.delete {
+    background: none;
+    text-decoration: underline;
+    color: darken($color-base, 10%);
+  }
+  &.oauth {
+    font-size: 1.5rem;
+    color: $color-base;    
+    font-weight: $text-medium;
+    &:hover {
+      color: $color-base;
+    }
+  }
+  &.lite {
+    background-color: $color-base;
+    &.add-beach {
+      float: right;
+    }
+  }
+  &.secondary {
+    border: 0.125rem solid lighten($color-base, 15%);
+    background-color: transparent;
+    margin-top: 1rem;
+    padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.125rem;
+    &:hover {
+      border: 0.125rem solid lighten($color-base, 25%);
+      background: transparent;
+    }
+    &:focus {
+      border: 0.125rem solid lighten($color-base, 25%);
+      background: transparent;
+    }
+  }
+}
+
+.profile-beaches-container li > input[type="checkbox"]:checked + label::before, .profile-beaches-container li > input[type="radio"]:checked + label::before {
+  background-image: url('data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" viewBox="0 0 32 32">
+      <path fill="#fec02f" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zm6.906 8.875l2.219 2.031-12.063 13.281-6.188-6.188 2.125-2.125 3.938 3.938 9.969-10.938z"/></svg>') !important;
+
+}
+
+.profile-settings-notifications-list li > input[type="checkbox"]:checked + label::before, .profile-beaches-container li > input[type="radio"]:checked + label::before {
+  background-image: url('data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" viewBox="0 0 32 32">
+      <path fill="#fec02f" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zm6.906 8.875l2.219 2.031-12.063 13.281-6.188-6.188 2.125-2.125 3.938 3.938 9.969-10.938z"/></svg>') !important;
+
+}
+
+// UI-Slider
+.ui-widget-content{
+  border-radius: 0rem;
+  margin-top: 1rem;
+  .ui-slider {
+    &-vertical {         
+    }
+    &-handle {
+      background: $color-base;
+      border: none;
+      border-radius: 0rem;
+    }
+    &-range {
+      background: lighten($color-base, 25%);
+    }
+  }
+}

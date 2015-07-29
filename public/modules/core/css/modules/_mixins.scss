@@ -1,0 +1,67 @@
+/* ============================ 
+  Media Queries
+============================ */
+
+@mixin breakpoint($point) {
+  @if $point == xxlarge {
+    @media only screen and (min-width: 90.063em) { @content; } /* min-width 1441px, xlarge screens */
+    @media only screen and (min-width: 90.063em) and (max-width: 120em) { @content; } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+  }
+  @else if $point == xlarge {
+    @media only screen and (min-width: 90.063em) { @content; } /* min-width 1441px, xlarge screens */
+    @media only screen and (min-width: 90.063em) and (max-width: 120em) { @content; } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+  }
+  @else if $point == large {
+    // @media only screen and (min-width: 64.063em) { @content; } /* min-width 1025px, large screens */
+    @media only screen and (min-width: 64.063em) and (max-width: 90em) { @content; } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+  }
+  @else if $point == medium {
+    // @media only screen and (min-width: 40.063em) { @content; } /* min-width 641px, medium screens */
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) { @content; } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+  }
+  @else if $point == small {
+    @media only screen and (max-width: 40em) { @content; } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+  }
+}
+
+//centering anything (known dimensions)
+
+@mixin dead-center($content-width, $content-height) {
+  margin-left: (-1 * $content-width/2);
+  position: absolute;
+  top: (-1 * $content-height/2);
+  left: 50%;
+  width: $content-width;
+  visibility: visible;
+}
+
+@mixin horizon() {
+  position: relative;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  overflow: visible;
+  visibility: visible;
+  display: block;
+}
+
+@mixin center-background-image() {
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include breakpoint(small) {
+      left: 50%;
+      margin-left: -512px;   /* 50% */      
+  }
+}
